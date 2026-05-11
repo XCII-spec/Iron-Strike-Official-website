@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Iron Strike</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>IRON STRIKE</h1>
+  <nav>
+    <button onclick="show('home')">Accueil</button>
+    <button onclick="show('shop')">Boutique</button>
+    <button onclick="show('play')">Jouer</button>
+    <button onclick="show('admin')">Admin</button>
+  </nav>
+</header>
+
+<section id="home" class="page active">
+  <h2>🔥 Iron Strike</h2>
+  <p>FPS tactique Roblox - combat réaliste</p>
+</section>
+
+<section id="shop" class="page">
+  <h2>Boutique</h2>
+  <div id="shopItems"></div>
+</section>
+
+<section id="play" class="page">
+  <h2>Jouer</h2>
+  <a class="btn" target="_blank" href="https://www.roblox.com/games/ID">Ouvrir Roblox</a>
+</section>
+
+<section id="admin" class="page">
+  <h2>Admin</h2>
+
+  <input id="user" placeholder="User">
+  <input id="pass" type="password" placeholder="Password">
+
+  <input id="name" placeholder="Nom item">
+  <input id="link" placeholder="Lien Roblox">
+
+  <button onclick="addItem()">Ajouter</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
