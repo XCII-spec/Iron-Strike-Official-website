@@ -1,25 +1,25 @@
-let items = [
-  { name: "VIP Pass", link: "https://www.roblox.com/game-pass/ID" }
-];
+import { createClient } from "@supabase/supabase-js";
 
-export default function handler(req, res) {
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY
+);
 
-  // GET boutique
+export default async function handler(req, res) {
+
   if (req.method === "GET") {
-    return res.json(items);
+    let { data } = await supabase.from("shop_items").select("*");
+    return res.json(data);
   }
 
-  // POST admin add
   if (req.method === "POST") {
-    const { user, pass, name, link } = req.body;
+    const { token, name, link } = req.body;
 
-    if (user !== "HACKER21" || pass !== "89304") {
-      return res.status(403).json({ error: "NO ACCESS" });
-    }
+    // ici tu vérifies token (JWT)
+    const { error } = await supabase
+      .from("shop_items")
+      .insert([{ name, link }]);
 
-    items.push({ name, link });
-    return res.json({ success: true });
+    return res.json({ success: !error });
   }
-
-  res.status(405).end();
 }
