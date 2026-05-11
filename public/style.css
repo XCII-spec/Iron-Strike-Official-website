@@ -32,4 +32,8 @@ button:hover {
   border: 1px solid rgba(255,165,0,0.3);
   backdrop-filter: blur(10px);
   padding: 15px;
+
+  .top1 { border: 2px solid gold; box-shadow: 0 0 15px gold; }
+.top2 { border: 2px solid silver; box-shadow: 0 0 10px silver; }
+.top3 { border: 2px solid #cd7f32; box-shadow: 0 0 10px #cd7f32; }
 }
