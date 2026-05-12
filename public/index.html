@@ -1,159 +1,87 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Iron Strike</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iron Strike</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#070b14;
+color:white;
+}
 
-      background: #ff7a00;
+.nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:#0a1020;
+border-bottom:1px solid #1e3a5f;
+}
 
-      background-image:
-        radial-gradient(circle at 20px 20px, rgba(0,0,0,0.08) 2px, transparent 2px),
-        radial-gradient(circle at 60px 60px, rgba(0,0,0,0.05) 2px, transparent 2px);
+.nav a{
+color:#aaa;
+margin:0 15px;
+text-decoration:none;
+}
 
-      background-size: 80px 80px;
-    }
+.nav a:hover{color:#4da3ff;}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+.hero{
+padding:80px 60px;
+}
 
-      padding: 15px 25px;
-      background: rgba(0,0,0,0.65);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,165,0,0.4);
-    }
+.hero h1{
+font-size:50px;
+}
 
-    header h1 {
-      letter-spacing: 3px;
-    }
+.hero span{color:#4da3ff;}
 
-    nav button {
-      background: black;
-      color: white;
-      border: 1px solid rgba(255,165,0,0.4);
-      padding: 8px 12px;
-      margin: 0 5px;
-      cursor: pointer;
-    }
+.btn{
+background:#4da3ff;
+padding:12px 18px;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
+margin-top:20px;
+}
 
-    nav button:hover {
-      transform: scale(1.05);
-    }
-
-    .page {
-      display: none;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .page.active {
-      display: block;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 18px;
-      margin-top: 15px;
-
-      background: black;
-      color: white;
-      text-decoration: none;
-
-      border-radius: 8px;
-      border: 1px solid rgba(255,165,0,0.5);
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-    }
-
-    #shopItems, #lbList {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      background: rgba(0,0,0,0.4);
-      border: 1px solid rgba(255,165,0,0.3);
-      padding: 15px;
-      width: 220px;
-      border-radius: 12px;
-    }
-
-    .top1 { border: 2px solid gold; }
-    .top2 { border: 2px solid silver; }
-    .top3 { border: 2px solid #cd7f32; }
-
-    input {
-      padding: 8px;
-      margin: 5px;
-    }
-  </style>
+.card{
+background:#0c1222;
+padding:20px;
+margin:60px;
+border-radius:12px;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>IRON STRIKE</h1>
+<div class="nav">
+<div><b>IRON STRIKE</b></div>
 
-  <nav>
-    <button onclick="show('home')">Accueil</button>
-    <button onclick="show('shop')">Boutique</button>
-    <button onclick="show('play')">Jouer</button>
-    <button onclick="show('admin')">Admin</button>
-    <button onclick="show('leaderboard')">Leaderboard</button>
-  </nav>
-</header>
+<div>
+<a href="index.html">Accueil</a>
+<a href="shop.html">Boutique</a>
+<a href="#">Événements</a>
+</div>
+</div>
 
-<!-- 🏠 HOME -->
-<section id="home" class="page active">
-  <h2>🔥 Iron Strike</h2>
-  <p>FPS tactique Roblox - combat intense</p>
-</section>
+<div class="hero">
+<h1>IRON <span>STRIKE</span></h1>
+<p>FPS compétitif nouvelle génération.</p>
 
-<!-- 🛒 SHOP -->
-<section id="shop" class="page">
-  <h2>Boutique</h2>
-  <div id="shopItems"></div>
-</section>
+<a href="shop.html">
+<button class="btn">Aller à la boutique</button>
+</a>
+</div>
 
-<!-- 🎮 PLAY -->
-<section id="play" class="page">
-  <h2>Jouer</h2>
-  <a class="btn" target="_blank" href="https://www.roblox.com/games/ID">
-    Ouvrir Roblox
-  </a>
-</section>
-
-<!-- 🏆 LEADERBOARD -->
-<section id="leaderboard" class="page">
-  <h2>TOP 3 PLAYERS</h2>
-  <div id="lbList"></div>
-</section>
-
-<!-- 🔐 ADMIN -->
-<section id="admin" class="page">
-  <h2>Admin</h2>
-
-  <input id="user" placeholder="User">
-  <input id="pass" type="password" placeholder="Password">
-
-  <input id="name" placeholder="Nom item">
-  <input id="link" placeholder="Lien Roblox">
-
-  <button onclick="addItem()">Ajouter</button>
-</section>
-
-<script src="script.js"></script>
+<div class="card">
+🔥 Action intense • 🎮 Multijoueur • 🌐 Communauté active
+</div>
 
 </body>
 </html>
