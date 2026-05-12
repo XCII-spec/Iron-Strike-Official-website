@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique - Iron Strike</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#070b14;
+color:white;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:#0a1020;
+border-bottom:1px solid #1e3a5f;
+}
+
+.nav a{
+color:#aaa;
+margin:0 15px;
+text-decoration:none;
+}
+
+.nav a:hover{color:#4da3ff;}
+
+.title{
+padding:40px 60px;
+font-size:28px;
+font-weight:bold;
+}
+
+.shop{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+padding:0 60px 60px;
+}
+
+.card{
+background:#0c1222;
+border-radius:12px;
+padding:15px;
+border:1px solid #1e3a5f;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.03);
+border-color:#4da3ff;
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.price{
+color:#4da3ff;
+margin:10px 0;
+font-weight:bold;
+}
+
+button{
+width:100%;
+padding:10px;
+border:none;
+border-radius:6px;
+background:#4da3ff;
+color:white;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+<div><b>IRON STRIKE</b></div>
+
+<div>
+<a href="index.html">Accueil</a>
+<a href="shop.html">Boutique</a>
+<a href="#">Événements</a>
+</div>
+</div>
+
+<div class="title">BOUTIQUE</div>
+
+<div class="shop">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
+<h3>Skin Omega Blue</h3>
+<div class="price">9,99 €</div>
+<button>Acheter</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1617634667039-8f6a3f4b5b2f">
+<h3>Premium Pass</h3>
+<div class="price">14,99 €</div>
+<button>Acheter</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1595590424283-b8f17842773f">
+<h3>Pack Arsenal</h3>
+<div class="price">24,99 €</div>
+<button>Acheter</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d6">
+<h3>2000 Crédits</h3>
+<div class="price">19,99 €</div>
+<button>Acheter</button>
+</div>
+
+</div>
+
+</body>
+</html>
